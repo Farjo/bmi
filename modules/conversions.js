@@ -6,21 +6,21 @@ export { yardsToMetres, metresToYards, poundsToKg, kgToPounds }
  "the pound shall be 0.453 592 37 kilogram exactly"
   therefore 1 kg is 2.2046226218 pounds (1/0.45359237) */
 
-const YD2M = 0.9144
-const LB2KG = 0.453_592_37
+const YARDS2METRES = 0.9144
+const POUNDS2KG = 0.453_592_37
 
 function yardsToMetres(yards) {
-	return yards * YD2M
+	return yards * YARDS2METRES
 }
 
 function metresToYards(metres) {
-	return metres / YD2M
+	return metres / YARDS2METRES
 }
 
 function poundsToKg (lbs) {
-	return lbs * LB2KG
+	return lbs * POUNDS2KG
 }
 
 function kgToPounds(kg) {
-	return kg / LB2KG
+	return kg / POUNDS2KG
 }
