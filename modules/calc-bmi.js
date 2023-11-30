@@ -1,4 +1,4 @@
-export { calcBMI as default }
+export default calcBMI
 
 /**
  * Calculate BMI from metric height and weight
