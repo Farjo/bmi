@@ -13,8 +13,11 @@ function onUpdatedForm(event) {
 
   const newValues = calculateConversions(event.target.id, inputValues)
 
-  updateBmiForm(newValues)
+  //updateBmiForm(newValues)
 
-  const bmi = calcBMI(inputValues.metres, inputValues.kg)
-  event.target.form.querySelector('#bmi').value = bmi.toFixed(2)
+  const allValues = { ...inputValues, ...newValues }
+  allValues.bmi = calcBMI(allValues.metres, allValues.kg).toFixed(1)
+  
+  updateBmiForm(allValues)
+  //event.target.form.querySelector('#bmi').value = bmi.toFixed(2)
 }
