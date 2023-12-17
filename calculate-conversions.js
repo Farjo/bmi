@@ -19,9 +19,9 @@ function calculateConversions(changedField, fields) {
     return { kg }
   }
   if (changedField === 'metres') {
-    const feetDecimal = metresToYards(metres) * 3
-    const feet = Math.floor(feetDecimal)
-    const inches = Math.floor((feetDecimal - feet) * 12)
+    const totalInches = Math.round(metresToYards(metres) * 36)
+    const feet = Math.floor(totalInches / 12)
+    const inches = totalInches % 12
     return { feet, inches }
   }
   if (['feet', 'inches'].includes(changedField)) {
