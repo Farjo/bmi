@@ -14,22 +14,41 @@
     <fieldset>
       <legend>BMI Calculator</legend>
       <p class="center bold">Weight</p>
-
-      <span class="lipair"><label for="kg">KG: </label>
-      <input id="kg" type="number" step="0.1" min="0" autofocus></span>
-      <span><label for="stone">Stone: </label>
-      <input id="stone" type="number" min="0">
-      <label for="pound"> Pounds: </label>
-      <input id="pound" type="number" step="0.01" max="13.99" min="0"></span>
+      <span class="outer">
+        <span class="label-input">
+          <label for="kg">KG: </label>
+          <input id="kg" type="number" step="0.1" min="0" autofocus>
+        </span>
+        <span class="imperial-pair">
+          <span class="label-input">
+            <label for="stone">Stone: </label>
+            <input id="stone" type="number" min="0">
+          </span>
+          <span class="label-input">
+            <label for="pound"> Pounds: </label>
+            <input id="pound" type="number" step="0.01" max="13.99" min="0">
+          </span>
+        </span>
+      </span>
 
       <p class="center bold">Height</p>
 
-      <label for="metres">Metres: </label>
-      <input id="metres" type="number" step="0.01" max="3" min="0">
-      <label for="feet">Feet: </label>
-      <input id="feet" type="number" max="10" min="0">
-      <label for="inches"> Inches: </label>
-      <input id="inches" type="number" step="0.01" max="11.99" min="0">
+      <span class="outer">
+        <span class="label-input">
+          <label for="metres">Metres: </label>
+          <input id="metres" type="number" step="0.01" max="3" min="0">
+        </span>
+        <span class="imperial-pair">
+          <span class="label-input">
+            <label for="feet">Feet: </label>
+            <input id="feet" type="number" max="10" min="0">
+          </span>
+          <span class="label-input">
+            <label for="inches"> Inches: </label>
+            <input id="inches" type="number" step="0.01" max="11.99" min="0">
+          </span>
+        </span>
+      </span>
 
       <p id="bmi-line">
         <label for="bmi" class="bold" id="bmi-label">BMI:</label>
