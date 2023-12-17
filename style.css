@@ -1,3 +1,8 @@
+body{
+  background-color: blanchedalmond;
+  color: darkslategrey;
+}
+
 fieldset {
   container-name: fieldset;
   container-type: inline-size;
@@ -7,6 +12,16 @@ label {
   margin: 0 0.25rem;
   width: 51.5px;
   text-align: right;
+}
+
+input {
+  background-color: ivory;
+  border-color:beige;
+}
+
+input:focus {
+  border-color: darkorange;
+  outline: 3px solid transparent;
 }
 
 .outer {
