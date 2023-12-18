@@ -20,8 +20,13 @@ input {
 }
 
 input:focus {
-  border-color: darkorange;
+  border-color: lightpink;
   outline: 3px solid transparent;
+}
+
+input:invalid {
+  outline: 2px solid crimson;
+  border-radius: 5px;
 }
 
 .outer {

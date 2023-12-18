@@ -9,12 +9,15 @@ const updateBmiForm = updateFieldsByID(bmiForm)
 bmiForm.addEventListener('input', onUpdatedForm)
 
 function onUpdatedForm(event) {
-  const inputValues = getFormInputValues(event.target.form)
+  const thisForm = event.target.form
+  const formID = event.target.id
+  const inputValues = getFormInputValues(thisForm)
 
-  const newValues = calculateConversions(event.target.id, inputValues)
+  const newValues = calculateConversions(formID, inputValues)
 
   const allValues = { ...inputValues, ...newValues }
-  allValues.bmi = calcBMI(allValues.metres, allValues.kg).toFixed(1)
-  
+  allValues.bmi = thisForm.checkValidity() ? calcBMI(allValues.metres, allValues.kg).toFixed(1) : '😕'
+  delete allValues[formID]
+
   updateBmiForm(allValues)
 }
