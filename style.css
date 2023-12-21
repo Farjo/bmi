@@ -20,7 +20,7 @@ input {
 }
 
 input:focus {
-  border-color: lightpink;
+  border-color: #cfb085;
   outline: 3px solid transparent;
 }
 
