@@ -17,6 +17,7 @@ label {
 input {
   background-color: ivory;
   border-color:beige;
+  width: 150px;
 }
 
 input:focus {
@@ -75,6 +76,15 @@ input:invalid {
 
 @container fieldset (max-width: 220px) {
   .label-input {
+    flex-direction: column;
+  }
+}
+
+@container fieldset (max-width: 158px) {
+  input {
+    width: 100%;
+  }
+  .outer {
     flex-direction: column;
   }
 }
